@@ -147,9 +147,9 @@ const home_content = () => {
           <a class="btn btn-primary" onclick="post_detials(${id})">details</a>
 
 
-          <button onclick="document.getElementById('commentForm').style.display='block'"    class="btn btn-primary">Comment</button>
+          <button onclick="document.getElementById('commentForm${id}').style.display='block'"    class="btn btn-primary">Comment</button>
 
-<div id="commentForm" style="display:none;">
+<div id="commentForm${id}" style="display:none;">
     
 
 <form>
