@@ -154,7 +154,7 @@ const home_content = () => {
 
 <form>
     <label for="comment">Comment:</label><br>
-    <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br>
+    <textarea id="comment${id}" name="comment" rows="4" cols="50" required></textarea><br>
     <button type="button" class="btn btn-primary" onclick="submitComment(${id})">Submit</button>
 </form>
 
@@ -200,11 +200,12 @@ const post_detials = (id) => {
 
 
 function submitComment(id) {
+  
   const token = localStorage.getItem("access_token");
   if (!token) {
     window.location.href = `login.html`;
   }
-  var discription = document.getElementById("comment").value;
+  var discription = document.getElementById(`comment${id}`).value;
   const info = {
     discription,
   };
