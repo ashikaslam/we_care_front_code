@@ -210,7 +210,8 @@ function submitComment(id) {
   };
   console.log(JSON.stringify(info));
 
-  fetch(`http://127.0.0.1:8000/post_object/coment/?id=${id}`, {
+  //fetch(`http://127.0.0.1:8000/post_object/coment/?id=${id}`, {
+  fetch(`https://food-site-03s7.onrender.com/post_object/coment/?id=${id}`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
